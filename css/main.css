@@ -1,0 +1,217 @@
+:root {
+  --main-color: #164ACF;
+  --hover-color: #1f56df; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Cuprum", "Open Sans", sans-serif;
+  color: white;
+  overflow-x: hidden; }
+
+p, ul, ol, li {
+  margin: 0;
+  padding: 0; }
+
+a, button {
+  outline: none;
+  border: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none; }
+
+a:hover, button:hover {
+  border: 0;
+  transition: all 1s ease 0s;
+  cursor: pointer;
+  color: #e1e1e1;
+  opacity: 0.9; }
+
+h1 {
+  font-size: 20px; }
+
+.app__header {
+  position: absolute;
+  width: 12%;
+  height: 12%;
+  top: 3%;
+  left: 10%;
+  z-index: 1; }
+  .app__header_link {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 0; }
+  .app__header_link:hover {
+    background: none;
+    color: none;
+    border: 0; }
+  .app__header_img {
+    width: 100%;
+    height: auto; }
+
+.app__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .app__content_main {
+    align-self: flex-start;
+    width: 100%;
+    position: relative; }
+  .app__content_header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2000;
+    bottom: 12%;
+    left: 10%;
+    width: 85%; }
+  .app__content_header > * {
+    display: flex;
+    align-items: center; }
+  .app__content_background {
+    top: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.4; }
+
+.app__block-info {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+  .app__block-info_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: var(--main-color);
+    width: 100%;
+    text-align: center; }
+    .app__block-info_header > h1, .app__block-info_header h2 {
+      color: white;
+      padding: 25px; }
+  .app__block-info_content {
+    color: #494949;
+    padding: 30px 0;
+    line-height: 35px;
+    margin: 0 20%;
+    font-size: 1.2rem; }
+  .app__block-info_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 5%; }
+
+.app__text {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  letter-spacing: 1px; }
+  .app__text_second, .app__text_fatty-second {
+    color: white; }
+  .app__text_fatty-second {
+    color: #555;
+    font-weight: bold;
+    line-height: 30px; }
+
+.app__btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.app__btn {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 6px;
+  border: 1px solid var(--main-color);
+  padding: 12px 10px;
+  font-weight: bold;
+  margin-right: 5px; }
+  .app__btn:hover {
+    border: 1px solid #6e6e6e;
+    background-color: var(--hover-color);
+    transition: all 1s ease 0s;
+    cursor: pointer; }
+
+.app__btn-second {
+  background-color: white;
+  color: var(--main-color);
+  border-radius: 6px;
+  border: 1px solid white;
+  padding: 12px 10px;
+  font-weight: bold; }
+  .app__btn-second:hover {
+    border: 1px solid var(--hover-color);
+    transition: all 1s ease 0s;
+    cursor: pointer;
+    color: var(--main-color); }
+
+.app__main_img {
+  width: 100vw;
+  min-width: 100vw;
+  filter: brightness(50%); }
+
+.app__ol {
+  clear: both;
+  list-style: none;
+  text-align: start;
+  padding: 0; }
+  .app__ol > li {
+    position: relative;
+    display: block;
+    padding-top: 1em;
+    margin: 1.1em 0;
+    counter-increment: inst; }
+  .app__ol > li::before {
+    content: counter(inst);
+    background: var(--main-color);
+    height: 16px;
+    display: inline-block;
+    padding-bottom: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 16px;
+    margin-right: 5px;
+    color: white;
+    font-weight: bold; }
+
+@media (max-width: 1024px) {
+  body, html {
+    font-size: 0.75rem; }
+  .app__block-info {
+    margin-bottom: 15px;
+    margin-top: 15px; }
+  .app__block-info_content {
+    margin: 0 2%; }
+  .app__btn, .app__btn-second {
+    height: 40px;
+    padding: 0 15px; } }
+
+@media (max-width: 460px) {
+  body, html {
+    font-size: 0.75rem; }
+  .app__block-info {
+    margin-bottom: 15px;
+    margin-top: 15px; }
+  .app__block-info_content {
+    margin: 0 5%; }
+  .app__btn, .app__btn-second {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1rem; } }
+
+@media (max-width: 320px) {
+  .app__header_img {
+    display: none; } }

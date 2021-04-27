@@ -1,0 +1,153 @@
+.footer {
+    display: flex;
+    background-color: var(--main-color);
+    width: 100%;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 1rem;
+    background: var(--main-color) url(https://istu.ru/images/footer.png?d41d8cd98f00b204e9800998ecf8427e) top center;
+
+    &__block-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        flex: 1;
+        border-bottom: 1px solid #d0d0d0;
+        padding: 25px 14%;
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    &__social {
+        padding: 15px;
+    }
+
+    &__link {
+        margin-top: 10px;
+    }
+
+    &__header-text {
+        font-weight: bold;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        padding: 15px 0;
+    }
+
+    &__social-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__block-cr {
+        flex: 0.4;
+        padding: 25px 14%;
+        font-size: 0.8rem;
+
+        & > * {
+            margin-bottom: 10px;
+        }
+        
+    }
+
+    & p {
+
+    }
+
+    &__contacts {
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+    }
+
+    &__icon-block {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-bottom: 10px;
+        align-items: baseline;
+    }
+
+    &__icon-letter:before {
+        content: "";
+        display: inline-block;
+        background: url(https://istu.ru/images/icon_sprite.png?36929e854a75ae56489b0e53352a8099) no-repeat -40px -45px;
+        background-size: auto;
+        width: 16px;
+        height: 11px;
+        background-size: 145px auto;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    &__icon-phone:before {
+        content: "";
+        display: inline-block;
+        background: url(https://istu.ru/images/icon_sprite.png?36929e854a75ae56489b0e53352a8099) no-repeat -60px -45px;
+        background-size: auto;
+        width: 15px;
+        height: 18px;
+        background-size: 145px auto;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    &__icon-email:before {
+        content: "";
+        display: inline-block;
+        background: url(https://istu.ru/images/icon_sprite.png?36929e854a75ae56489b0e53352a8099) no-repeat -80px -45px;
+        background-size: auto;
+        width: 15px;
+        height: 16px;
+        background-size: 145px auto;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    &__icon-fax:before {
+        content: "";
+        display: inline-block;
+        background: url(https://istu.ru/images/icon_sprite.png?36929e854a75ae56489b0e53352a8099) no-repeat -100px -45px;
+        background-size: auto;
+        width: 16px;
+        height: 15px;
+        background-size: 145px auto;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .footer {
+        font-size: 1rem;
+    }
+
+    
+}
+
+@media(max-width: 460px) {
+
+    .footer {
+        font-size: 1rem;
+    }
+
+    .footer__block-info {
+        flex-direction: column;
+        padding: 25px 4%;
+        
+        & > div {
+            margin-top: 15px;
+        }
+    }
+}
