@@ -61,10 +61,6 @@
         
     }
 
-    & p {
-
-    }
-
     &__contacts {
         list-style-type: none;
         margin: 0;
@@ -131,9 +127,7 @@
 @media(max-width: 1024px) {
     .footer {
         font-size: 1rem;
-    }
-
-    
+    }    
 }
 
 @media(max-width: 460px) {

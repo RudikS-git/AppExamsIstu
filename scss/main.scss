@@ -10,7 +10,6 @@ html, body {
     width: 100%;
     font-family: "Cuprum", "Open Sans", sans-serif;
     color: white;
-
     overflow-x: hidden;
 }
 
@@ -42,33 +41,6 @@ h1 {
 
 .app {
 
-    &__header {
-        position: absolute;
-        width: 12%;
-        height: 12%;
-        top: 3%;
-        left: 10%;
-        z-index: 20;
-
-        &_link {
-            display: block;
-            width: 100%;
-            height: auto;
-            border: 0;
-        }
-
-        &_link:hover {
-            background: none;
-            color: none;
-            border: 0;
-        }
-
-        &_img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
     &__content {
         display: flex;
         justify-content: center;
@@ -80,11 +52,8 @@ h1 {
             width: 100%;
             height: 100vh;
             position: relative;
-            background-image: url("/assets/main-img.jpg");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-
+            background: url("../assets/main-img.jpg") center no-repeat;
+            background-size: cover ;
         }
 
         &_main:after {
@@ -96,7 +65,7 @@ h1 {
             bottom: 0;
             background: rgba(0,0,0,.5);
             z-index: 2;
-            }
+        }
 
         &_header {
             display: flex;
@@ -114,7 +83,7 @@ h1 {
             justify-content: space-between;
         }
 
-        &_header>* {
+        &_header > * {
             display: flex;
             align-items: center;
         }
@@ -128,51 +97,8 @@ h1 {
         }
     }
 
-    &__block-info {
-        margin-bottom: 50px;
-        margin-top: 50px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        &_header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 150px;
-            background: var(--main-color);
-            width: 100%;
-            text-align: center;
-            font-size: 26px;
-
-            & > h1, h2 {
-                color: white;
-                padding: 25px;
-            }
-        }
-
-        &_content {
-            color: rgb(73, 73, 73);
-            padding: 30px 0;
-            line-height: 35px;
-            margin: 0 20%;
-            font-size: 1.2rem;
-        }
-
-        &_cards {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 5%;
-        }
-    }
-
     &__text {
         align-self: flex-start;
-        // margin-left: 10%;
         margin-bottom: 10px;
         font-weight: normal;
         font-size: 50px;
@@ -189,7 +115,6 @@ h1 {
             width: 40%;
             font-size: 20px;
             line-height: 24px;
-            // margin-left: 10%;
         }
 
         &_fatty-second {
@@ -221,29 +146,19 @@ h1 {
             transition: all 1s ease 0s;
             cursor: pointer;
         }
-    }
 
-    &__btn-second {
-        background-color: white;
-        color: var(--main-color);
-        font-size: 25px;
-        border-radius: 6px;
-        border: 1px solid white;
-        padding: 15px 24px;
-        font-weight: bold;
-
-        &:hover {
-            border: 1px solid var(--hover-color);
-            transition: all 1s ease 0s;
-            cursor: pointer;
+        &_second {
+            background-color: white;
             color: var(--main-color);
+            border: 1px solid white;
+    
+            &:hover {
+                border: 1px solid var(--hover-color);
+                transition: all 1s ease 0s;
+                cursor: pointer;
+                color: var(--main-color);
+            }
         }
-    }
-
-    &__main_img {
-        width: 100vw;
-        min-width: 100vw;
-        filter: brightness(50%)
     }
 
     &__ol {
@@ -280,24 +195,27 @@ h1 {
 
 @media(max-width: 1025px) {
 
-    .app{
+    body, html {
+        font-size: 0.75rem;
+    }
 
-        &__content{
+    .app {
 
-            &_main{
-            flex-direction: column;
+        &__content {
+
+            &_main {
+                flex-direction: column;
             }
             
-            &_header{
-                position:static;
+            &_header {
+                position: static;
                 justify-content: flex-end;
                 z-index: 90;
                 width: 100%;
                 height: 100%;
-
             }
 
-            &_header-second{
+            &_header-second {
                 flex-direction: column;
                 z-index: 3;
             }
@@ -318,42 +236,20 @@ h1 {
             }
         }
 
-        &__btns{
+        &__btns {
             margin-top: 100px;
             margin-bottom: 80px;
             width: 90%;
             justify-content: space-between;
         }
 
-        &__btn{
+        &__btn {
             font-size: 14px;
             line-height: 18px;
             padding: 10px 20px;
             
         }
-
-        &__btn-second{
-            font-size: 14px;
-            line-height: 18px;
-            padding: 10px 20px;
-        }
-
     }
-
-    body, html {
-        font-size: 0.75rem;
-    }
-
-    .app__block-info {
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
-
-    .app__block-info_content {
-        margin: 0 2%;
-    }
-
-
 }
 
 @media(max-width: 460px) {
@@ -361,10 +257,7 @@ h1 {
         font-size: 0.75rem;
     }
 
-
-    .app{
-
-
+    .app {
 
         &__text{
             font-size: 30px;
@@ -387,42 +280,18 @@ h1 {
             margin-bottom: 40px;
         }
 
-
-
         &__header{
 
             &_img{
                 width: 80px;
             }
         }
-
-    }
-
-
-
-    .app__content_main{
-
-    }
-
- 
-
-    .app__block-info {
-        margin-bottom: 15px;
-        margin-top: 15px;
-
-        &_header{
-            font-size: 21px;
+    
+        &__btn {
+            height: 40px;
+            padding: 0 15px;
+            font-size: 1rem;
         }
-    }
 
-    .app__block-info_content {
-        margin: 0 5%;
-    }
-
-    .app__btn, .app__btn-second {
-        height: 40px;
-        padding: 0 15px;
-        font-size: 1rem;
     }
 }
-
